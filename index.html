@@ -1,0 +1,52 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Temperature Converter</h2> <br>-->
+<!--<p>Nhập giá trị Fahrenheit để đổi sang giá trị Celcius:</p><br>-->
+<!--<p>Fahrenheit</p>-->
+<!--<input type="number" id="input" onchange="changeValue(a) {-->
+
+<!--}"> <br>-->
+<!--<p id="demo "></p>-->
+<!--</body>-->
+<!--</html>-->
+<!--<script src="java/my.js">-->
+<!--    function changeValue(a) {-->
+<!--        a = parseFloat(a)-->
+<!--        document.getElementById("demo ").innerHTML= (a-32)/1.8-->
+<!--    }-->
+
+<!--</script>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+               oninput="temperatureConverter(this.value)"
+               onchange="temperatureConverter(this.value)">
+    </p>
+    <p>Celsius: <span id="outputCelsius"></span></p>
+</form>
+
+<script>
+
+    function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputCelsius").innerHTML = (valNum - 32) / 1.8;
+    }
+
+</script>
+</body>
+</html>
